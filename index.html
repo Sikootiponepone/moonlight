@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+     <body>
+         <header>
+             <a href="#" class="logo">Logo</a>
+             <ul>
+                 <li><a href="#" class="active">Home</a></li>
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">Work</a></li>
+                 <li><a href="#">Contact</a></li>
+             </ul>
+         </header>
+         <section>
+             <img src="vector1.jpg" id="background">
+             <h2 id="text">Moon Light</h2>
+             <a href="#sec" id="btn">Explore</a>
+         </section>
+         <div class="sec" id="sec">
+             <h2>Parallax Scrolling Effects</h2>
+             <p>
+                 Etiam rutrum massa et pharetra tempus. Ut ullamcorper leo et egestas dignissim. Morbi ullamcorper, urna sit amet ultricies pharetra, ipsum velit blandit ipsum, facilisis euismod velit purus eget lorem. Morbi accumsan lectus lorem. Proin tincidunt nisl tellus, ut finibus ex molestie nec. Sed quis velit varius metus sodales molestie. Aliquam erat volutpat. Duis luctus, neque ac pretium gravida, quam felis dictum ipsum, non tempor leo tortor nec sem. Ut aliquam nec purus sit amet fermentum. Praesent molestie ex quis orci sodales ultrices. Integer et mauris a dui bibendum ultricies.<br><br>Quisque et risus dolor. Pellentesque sollicitudin orci in est mattis, quis varius ligula viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis rhoncus purus et orci semper consectetur. Praesent congue molestie ligula, non aliquam odio sollicitudin malesuada. Aliquam ex leo, lobortis vitae volutpat vel, efficitur eu ipsum. Nunc imperdiet ex eget ornare condimentum. Pellentesque volutpat, tortor eget lobortis venenatis, orci neque mollis tortor, at facilisis magna tortor efficitur purus
+                 <br><br> Etiam rutrum massa et pharetra tempus. Ut ullamcorper leo et egestas dignissim. Morbi ullamcorper, urna sit amet ultricies pharetra, ipsum velit blandit ipsum, facilisis euismod velit purus eget lorem. Morbi accumsan lectus lorem. Proin tincidunt nisl tellus, ut finibus ex molestie nec. Sed quis velit varius metus sodales molestie. Aliquam erat volutpat. Duis luctus, neque ac pretium gravida, quam felis dictum ipsum, non tempor leo tortor nec sem. Ut aliquam nec purus sit amet fermentum. Praesent molestie ex quis orci sodales ultrices. Integer et mauris a dui bibendum ultricies
+             </p>
+         </div>
+         <script>
+             let moon = document.getElementById('background');
+             let text = document.getElementById('text');
+             let btn = document.getElementById('btn');
+
+             window.addEventListener('scroll', function () {
+                 let value = window.scrollY;
+                 moon.style.top = value * 0.5 + 'px';
+                 text.style.marginTop = value * 0.5 + 'px';
+                 btn.style.marginTop = value * 0.8 + 'px';
+                 
+             })
+         </script>
+     </body>
+</html>
